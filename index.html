@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
 
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SkyVision Drone Marketplace</title>
+<title>SkyVision Drone Services | Professional Aerial Photography & Inspections</title>
 
 <style>
 
@@ -13,101 +13,189 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Inter,Arial,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-background:#0b1220;
+background:#08111f;
 color:white;
 line-height:1.6;
 }
 
-/* HERO */
 header{
-height:100vh;
+min-height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
+padding:40px;
 background:
-linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
 url("hero-drone.jpg") center/cover;
 }
 
+.hero{
+max-width:900px;
+}
+
+.badge{
+display:inline-block;
+padding:8px 16px;
+border-radius:999px;
+background:rgba(37,99,235,.15);
+border:1px solid rgba(96,165,250,.3);
+color:#93c5fd;
+margin-bottom:20px;
+font-size:.9rem;
+}
+
 .hero h1{
-font-size:3.5rem;
-margin-bottom:15px;
+font-size:4rem;
+line-height:1.1;
+margin-bottom:20px;
 }
 
 .hero p{
+font-size:1.25rem;
 color:#cbd5e1;
-font-size:1.2rem;
-margin-bottom:25px;
+margin-bottom:35px;
 }
 
-/* BUTTON */
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
 .btn{
+padding:14px 28px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+display:inline-block;
+transition:.3s;
+}
+
+.primary{
 background:#2563eb;
 color:white;
-padding:12px 26px;
-border-radius:10px;
-text-decoration:none;
-border:none;
-cursor:pointer;
-transition:.3s;
-display:inline-block;
 }
 
-.btn:hover{
-background:#1d4ed8;
+.primary:hover{
+transform:translateY(-2px);
 }
 
-/* SECTIONS */
+.whatsapp{
+background:#25D366;
+color:white;
+}
+
 section{
-padding:80px 10%;
+padding:90px 10%;
 }
 
-h2{
+.section-title{
+font-size:2.5rem;
 text-align:center;
-font-size:2.3rem;
-margin-bottom:40px;
+margin-bottom:20px;
 }
 
-/* SERVICES */
-.grid{
+.section-subtitle{
+text-align:center;
+color:#94a3b8;
+max-width:700px;
+margin:0 auto 50px;
+}
+
+.stats{
 display:grid;
-grid-template-columns:repeat(auto-fit, minmax(240px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
+margin-top:-70px;
+padding:0 10%;
+}
+
+.stat{
+background:#111827;
+padding:30px;
+border-radius:16px;
+text-align:center;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.stat h3{
+font-size:2rem;
+color:#60a5fa;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
 }
 
 .card{
-background:#1e293b;
+background:#111827;
 padding:30px;
-border-radius:14px;
-text-align:center;
+border-radius:18px;
+border:1px solid rgba(255,255,255,.05);
 }
 
 .card h3{
-margin-bottom:10px;
+margin-bottom:12px;
 }
 
 .price{
-font-size:1.8rem;
+font-size:2rem;
+font-weight:700;
 color:#60a5fa;
-margin:15px 0;
+margin:20px 0;
 }
 
-/* CONTACT */
-.contact{
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.quote{
+background:#111827;
+padding:25px;
+border-radius:16px;
+}
+
+.cta{
 text-align:center;
+background:#0f172a;
 }
 
-/* FOOTER */
 footer{
-background:#020617;
+padding:30px;
 text-align:center;
-padding:20px;
 color:#94a3b8;
+background:#020617;
+}
+
+.whatsapp-float{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+text-decoration:none;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+z-index:9999;
 }
 
 </style>
@@ -117,45 +205,98 @@ color:#94a3b8;
 <body>
 
 <header>
+
 <div class="hero">
-<h1>SkyVision Drone Marketplace</h1>
-<p>Professional Drone Photography, Video & Inspection Services</p>
-<a href="#services" class="btn">View Services</a>
+
+<div class="badge">
+Professional Drone Services Across Canada
 </div>
+
+<h1>
+Capture More. Inspect Smarter. See Everything From Above.
+</h1>
+
+<p>
+Professional aerial photography, cinematic video production,
+roof inspections, mapping and surveying delivered by experienced drone operators.
+</p>
+
+<div class="hero-buttons">
+<a href="#services" class="btn primary">
+View Services
+</a>
+
+<a
+href="https://wa.me/17802679673?text=Hi%20SkyVision,%20I'd%20like%20a%20quote."
+target="_blank"
+class="btn whatsapp">
+Chat on WhatsApp </a>
+
+</div>
+
+</div>
+
 </header>
+
+<section class="stats">
+
+<div class="stat">
+<h3>500+</h3>
+<p>Completed Flights</p>
+</div>
+
+<div class="stat">
+<h3>4K</h3>
+<p>Ultra-HD Footage</p>
+</div>
+
+<div class="stat">
+<h3>24hr</h3>
+<p>Fast Turnaround</p>
+</div>
+
+<div class="stat">
+<h3>100%</h3>
+<p>Client Satisfaction Focus</p>
+</div>
+
+</section>
 
 <section id="services">
 
-<h2>Services</h2>
+<h2 class="section-title">
+Our Services
+</h2>
 
-<div class="grid">
+<p class="section-subtitle">
+Drone solutions for real estate, construction, infrastructure,
+marketing agencies and private clients.
+</p>
+
+<div class="services">
 
 <div class="card">
 <h3>Aerial Photography</h3>
-<p>High-quality real estate & commercial imagery.</p>
-<div class="price">$250 CAD</div>
-<button class="btn" onclick="checkout('Aerial Photography',250)">Book Now</button>
+<p>High-resolution photos for listings, marketing and commercial projects.</p>
+<div class="price">From $250</div>
 </div>
 
 <div class="card">
-<h3>Drone Videography</h3>
-<p>4K cinematic footage for brands & events.</p>
-<div class="price">$500 CAD</div>
-<button class="btn" onclick="checkout('Drone Videography',500)">Book Now</button>
+<h3>Cinematic Videography</h3>
+<p>Professional 4K drone footage for events, tourism and brand campaigns.</p>
+<div class="price">From $500</div>
 </div>
 
 <div class="card">
-<h3>Inspections</h3>
-<p>Safe roof, tower & infrastructure inspections.</p>
-<div class="price">$350 CAD</div>
-<button class="btn" onclick="checkout('Inspection Service',350)">Book Now</button>
+<h3>Roof & Building Inspections</h3>
+<p>Reduce risk and improve reporting with detailed aerial inspections.</p>
+<div class="price">From $350</div>
 </div>
 
 <div class="card">
-<h3>Mapping</h3>
-<p>Accurate aerial mapping & surveying data.</p>
-<div class="price">$750 CAD</div>
-<button class="btn" onclick="checkout('Mapping Service',750)">Book Now</button>
+<h3>Mapping & Surveying</h3>
+<p>Accurate aerial data collection for construction and land development.</p>
+<div class="price">From $750</div>
 </div>
 
 </div>
@@ -164,60 +305,67 @@ color:#94a3b8;
 
 <section>
 
-<h2>About SkyVision</h2>
+<h2 class="section-title">
+Why Choose SkyVision?
+</h2>
 
-<p style="max-width:800px;margin:auto;text-align:center;color:#cbd5e1;">
-We provide professional UAV drone solutions for businesses and individuals.
-From cinematic video production to inspection and mapping, we deliver
-safe, reliable, and high-quality aerial services across Canada.
+<p class="section-subtitle">
+We combine advanced UAV technology with professional service to deliver reliable results on every project.
 </p>
 
 </section>
 
-<section id="contact">
+<section>
 
-<h2>Contact</h2>
+<h2 class="section-title">
+Client Reviews
+</h2>
 
-<div class="contact">
+<div class="testimonials">
 
-<p>Email: info@skyvisiondrones.com</p>
+<div class="quote">
+"The aerial footage transformed our marketing campaign and generated incredible engagement."
+</div>
 
-<!-- WhatsApp hidden number -->
-<a class="btn"
-href="https://wa.me/17802679673"
-target="_blank">
-Chat on WhatsApp
-</a>
+<div class="quote">
+"Fast, professional, and detailed inspection reporting. Highly recommended."
+</div>
+
+<div class="quote">
+"Excellent communication and stunning drone photography."
+</div>
 
 </div>
 
 </section>
 
+<section class="cta">
+
+<h2 class="section-title">
+Need A Quote?
+</h2>
+
+<p class="section-subtitle">
+Tell us about your project and receive a custom estimate.
+</p>
+
+<a
+href="https://wa.me/17802679673?text=Hi%20SkyVision,%20I'd%20like%20a%20quote."
+target="_blank"
+class="btn whatsapp">
+Get Your Quote on WhatsApp </a>
+
+</section>
+
 <footer>
-© 2026 SkyVision Drone Marketplace
+© 2026 SkyVision Drone Services. All Rights Reserved.
 </footer>
 
-<script>
-
-async function checkout(service,price){
-
-const res = await fetch("https://YOUR-BACKEND.com/api/create-checkout-session",{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify({service,price})
-});
-
-const data = await res.json();
-
-if(data.url){
-window.location.href = data.url;
-}
-
-}
-
-</script>
+<a
+href="https://wa.me/17802679673?text=Hi%20SkyVision,%20I'd%20like%20a%20quote."
+target="_blank"
+class="whatsapp-float">
+💬 </a>
 
 </body>
 </html>
